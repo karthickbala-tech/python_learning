@@ -1,0 +1,17 @@
+{%extends "base.html"%}
+{%block content%}
+<h1>Add Users</h1>
+<form method="POST">
+
+<label>Name</label><br>
+<input type="text" name="name" required>   <br>   <br>
+
+<label for= >Email</label><br>
+<input type="email" name="email" required><br><br>
+
+<button type="submit">Add User</button>
+</form>
+<br>
+
+<a href="/users">back</a>
+{%endblock%}

@@ -1,0 +1,8 @@
+{%macro title(value)%}
+    <h4> {{value}} page</h4>
+{%endmacro%}
+
+{%macro input_field(name,type='text',placeholder='')%}
+    <label for="">{{name | title}}</label>
+    <input type="{{text}}" name="{{name}}" placeholder={{placeholder}}>
+{% endmacro %}
