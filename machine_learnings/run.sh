@@ -1,7 +1,0 @@
-#!/bin/bash
-# Activate the virtual environment
-source ~/Documents/machine_learning/ml-env/bin/activate
-
-# Run the Python file passed as argument
-python "$1"
-
