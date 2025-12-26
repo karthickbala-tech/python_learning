@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import 'macros.html' as element %}
+{% block contect%}
+    <h1>Lets enjoy your python journey</h1>
+    {{element.title("Home")}}
+    <h2>{{ language }}</h2>
+    {% include "another_base.html" %}
+    <h1>
+        {%if language == "python"%} 
+            <p> available {{language}} cources </p>
+        {%endif%}
+    </h1>
+    <ul>
+        {%for num in List%}
+ 
+        <li>{{num}}</li>
+        
+        
+        {%endfor%}
+
+    </ul>
+    <form action="">
+        {{element.input_field(name='user name ')}}  <br><br>
+        {{element.input_field(name='user password ',type='password')}} <br><br>
+        {{element.input_field(name='Full Name ',placeholder='Enter your full name')}} <br><br>
+    </form>
+
+    <h1>course rate :{{number | double}} but 50% off {{number }}</h1>
+{% endblock%}
