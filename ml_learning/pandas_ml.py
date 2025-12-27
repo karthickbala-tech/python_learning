@@ -5,66 +5,66 @@ df=pd.read_csv('customers-100.csv')
 #drop dublicate
 print(df.drop_duplicates(subset=['First Name'],keep='last'))
 
-seelecting rows based on conditionals
+# seelecting rows based on conditionals
 print(df[df['country']=='chile'])
 
-navigating dataframe
+# navigating dataframe
 print(df.iloc[0])
 print(df.iloc[0:5])
 df=df.set_index(df['First Name'])
 print(df.loc['Sheryl'])
 
-shape
+# shape
 print(df.shape)
 
-describe
+# describe
 print(df.describe())
 
-creat row
+# creat row
 new_person=df.series()
 
-append row
+# append row
 df.append(new_person,ignore_index=True)
 
-head and tail
+# head and tail
 print(df.head(5))
 print(df.tail(5))
 
-rescaling a Feture
+# rescaling a Feture
 import pandas as pd
 import numpy as np
 
- Load libraries
+#  Load libraries
 from sklearn import preprocessing
 
- Create feature
+#  Create feature
 feature = np.array([[-500.5],
                     [-100.1],
                     [0],
                     [100.1],
                     [900.9]])
- Create scaler
+#  Create scaler
 minmax_scale = preprocessing.MinMaxScaler(feature_range=(0, 1))
- Scale feature
+#  Scale feature
 scaled_feature = minmax_scale.fit_transform(feature)
 
 print(scaled_feature)
 
- Load libraries
+#  Load libraries
 import numpy as np
 from sklearn import preprocessing
 
- Create feature
+#  Create feature
 x = np.array([[-1000.1],
         [-200.2],
         [500.5],
         [600.6],
         [9000.9]])
 
- Create scaler
+#  Create scaler
 scaler = preprocessing.StandardScaler()
 
- Transform the feature
+#  Transform the feature
 standardized = scaler.fit_transform(x)
 
 print(standardized)
