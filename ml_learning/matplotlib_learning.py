@@ -124,7 +124,7 @@ ax[2].tick_params(axis='x', rotation=45)
 plt.tight_layout()  
 plt.show()
 
-
+import pandas as pd
 
 csv_file = pd.read_csv("/home/parrot/Documents/machine_learning/datasets/dunya.csv")
 
